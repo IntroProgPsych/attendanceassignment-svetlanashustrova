@@ -4,3 +4,21 @@
 # Build a dictionary called counts where each key is a number from the list and each value is
 # how many times that number appears.
 # Print the list on the first line, then print the dictionary on the second line.
+
+#creating an empty list and dictionary for preserving numbers
+numbers = []
+counts = {}
+
+user_input = input("Enter 5 integers separated by spaces: ")
+#splitting given sequence in parts, since "int(input)" is appropriate for only 1 number
+parts = user_input.split()
+
+# p - an element from parts. Append adds a number to "numbers" list
+for p in parts:
+    numbers.append(int(p))
+
+for num in numbers:
+    counts[num] = numbers.count(num)
+
+print(numbers)
+print(counts)
